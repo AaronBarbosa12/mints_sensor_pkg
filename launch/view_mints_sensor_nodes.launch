@@ -1,0 +1,7 @@
+<launch>
+
+<node pkg="rqt_multiplot" name="rqt_multiplot" type="rqt_multiplot" output="screen">
+    <rosparam file="$(find mints_sensor_pkg)/rqt_multiplot_conf.xml" command="load" ns="configuration" /> 
+</node>
+
+</launch>

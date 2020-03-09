@@ -1,0 +1,15 @@
+<launch>
+
+<!-- Start sensor publishers --> 
+<node pkg="mints_sensor_pkg" name="APDS_NODE" type="APDS_publisher.py" output="screen"></node>
+<node pkg="mints_sensor_pkg" name="AS_NODE" type="AS_publisher.py" output="screen"></node>
+<node pkg="mints_sensor_pkg" name="BME280_NODE" type="BME280_publisher.py" output="screen"></node>
+<node pkg="mints_sensor_pkg" name="GL001_NODE" type="GL001_publisher.py" output="screen"></node>
+<node pkg="mints_sensor_pkg" name="GUV001_NODE" type="GUV001_publisher.py" output="screen"></node>
+<node pkg="mints_sensor_pkg" name="MGS001_NODE" type="MGS001_publisher.py" output="screen"></node>
+<node pkg="mints_sensor_pkg" name="SCD30_NODE" type="SCD30_publisher.py" output="screen"></node>
+<node pkg="mints_sensor_pkg" name="TMG3993_NODE" type="TMG3993_publisher.py" output="screen"></node>
+<node pkg="mints_sensor_pkg" name="TSL2591_NODE" type="TSL2591_publisher.py" output="screen"></node>
+<node pkg="mints_sensor_pkg" name="VEML_NODE" type="VEML_publisher.py" output="screen"></node>
+
+</launch>
