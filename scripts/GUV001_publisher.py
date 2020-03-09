@@ -9,22 +9,23 @@ import json
 from mintsXU4 import mintsDefinitions as mD
 
 if __name__ == '__main__':
-     rospy.init_node('GUV001_pub', anonymous=True)
-     pub_uvLevel = rospy.Publisher('walkingrobot/GUV001/uvLevel', Float32, queue_size=10)
+     mac_add = mD.findMacAddress()
+     rospy.init_node('A'+ mac_add +'_' + 'GUV001_pub', anonymous=True)
+     pub_uvLevel = rospy.Publisher('A'+mac_add + '/GUV001/uvLevel', Float32, queue_size=10)
 
      rate = rospy.Rate(0.2) 
 
      data_path = mD.dataFolder
-     
-     keyword =  '/' + mD.findMacAddress() + '/GUV001.json'
+
+     keyword =  '/' + mac_add + '/GUV001.json'
 
 
      while not rospy.is_shutdown():
-	with open(data_path+keyword) as file:
-		data = json.load(file)
+          with open(data_path+keyword) as file:
+               data = json.load(file)
 
-		uvLevel =float(data['uvLevel'])
+               uvLevel =float(data['uvLevel'])
 
-		pub_uvLevel.publish(uvLevel)
+               pub_uvLevel.publish(uvLevel)
 
-		rate.sleep()
+               rate.sleep()
