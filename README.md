@@ -1,13 +1,13 @@
 # mints_sensor_pkg
 Robot Operating System (ROS) package for communicating with a preassembled array of environmental sensors. Sensors are calibrated using a variety of machine learning approaches, including naive bayes models and random forests. Package takes in data from multiple sensor arrays and displays the incoming data recieved in real time using rqt_multiplot.
 
-![Robot Image](images/minitaur_pkg.jpg)
-
 # What I've Learned
 * How to use ROS in order to organize projects into reusable blocks.
 * How to use the Robot Operating System (ROS) in order to send and recieve data over a network
 * How to visualize data in real time using rqt_plot
 * How to use machine learning to improve the performance of low-cost sensors, allowing them to perform comparably to their more expensive counterparts. 
+
+![Robot Image](images/minitaur_pkg.jpg)
 
 # Onboard Sensors
 * Adafruit VEML6070 UV Sensor Breakout (https://learn.adafruit.com/adafruit-veml6070-uv-light-sensor-breakout)
